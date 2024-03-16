@@ -1,0 +1,43 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://sendgrid.com/content/dam/sendgrid/legacy/2021/09/Untitled-design-53.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  margin-top: 80px;
+  
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: 900px;
+  
+}
+.button {
+  background-color: #738bd0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #4583a0;
+}
+.mail-item {
+  margin-bottom: 10px;
+}
+
+input,textarea{
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid white;
+  background-color: whitesmoke;
+  
+}
+

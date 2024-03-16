@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<title>Email Client</title>
+
+</head>
+<body>
+  <div class="container">
+    <button class="button" style="margin-top: 200px;" id="composeButton" onclick="composeEmail()">Compose</button>
+    <button class="button" id="viewdrafts"  onclick="showDrafts()">View Drafts</button>
+    <div id="mailList">
+      <p id="noMails">No sent mails yet</p>
+      <ul id="sentMails" style="display: none;"></ul>
+      <ul id="draftMails" style="display: none;"></ul>
+    </div>
+  </div>
+  
+
+  <div id="composeModal" class="modal" style="display: none;">
+    <div class="container">
+      <h2>Compose Email</h2>
+      <label for="composeFrom">From:</label>
+      <input type="text" id="composeFrom" placeholder="Your email address"><br><br>
+      <label for="composeTo">To:</label>
+      <input type="text" id="composeTo" placeholder="Recipient's email address"><br><br>
+      <label for="composeMessage">Message:</label><br>
+      <textarea id="composeMessage" rows="4" cols="50" placeholder="Enter your message"></textarea><br><br>
+      <button class="button"  onclick="saveDraft()">Save</button>
+      <button class="button" onclick="sendEmail()">Send</button>
+
+    </div>
+  </div>
+  
+ 
+  <div id="editModal" class="modal" style="display: none;">
+    <div class="container">
+      <h2>Edit Email</h2>
+      <label for="editFrom">From:</label>
+      <input type="text" id="editFrom" placeholder="Your email address" ><br><br>
+      <label for="editTo">To:</label>
+      <input type="text" id="editTo" placeholder="Recipient's email address" ><br><br>
+      <label for="editMessage">Message:</label><br>
+      <textarea id="editMessage" rows="4" cols="50"></textarea><br><br>
+      <button class="button" onclick="saveDraftFromEdit()">Save</button>
+      <button class="button" onclick="sendEmailFromEdit()">Send</button>
+    </div>
+  </div>
+</body>
+</html>
